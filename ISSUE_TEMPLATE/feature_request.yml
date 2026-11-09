@@ -1,0 +1,69 @@
+name: ✨ Feature request
+description: Suggest a new feature or an improvement
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Please check the [lines we don't cross](https://github.com/tavern-bot/.github/blob/main/CONTRIBUTING.md#-lines-we-dont-cross) first: requests for YouTube playback or real-money features will be closed.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Core
+        - Moderation
+        - Economy
+        - Casino
+        - Music
+        - Levels
+        - Welcome
+        - Roles
+        - Tickets
+        - Community
+        - Utilities
+        - Dashboard
+        - New module
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the need, not only the solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: Who needs it, what do they want, and why?
+      value: "As a <admin / moderator / member / DJ / support staff>, I want … so that …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know it works? Each line should be a testable case.
+      placeholder: |
+        - [ ] Running `/command` with … does …
+        - [ ] A member without the role gets an ephemeral refusal
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other bots that do this, workarounds you use today…
+
+  - type: checkboxes
+    id: contribute
+    attributes:
+      label: Contribution
+      options:
+        - label: I'd like to implement this myself

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🛡️ Report a security vulnerability
+    url: https://github.com/tavern-bot/.github/blob/main/SECURITY.md
+    about: Please report vulnerabilities privately. Never use a public issue.
+  - name: 💬 Get help setting up Tavern
+    url: https://github.com/tavern-bot/.github/blob/main/SUPPORT.md
+    about: Setup questions belong on the support server, not in issues.

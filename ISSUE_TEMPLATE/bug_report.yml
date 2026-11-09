@@ -1,0 +1,97 @@
+name: 🐛 Bug report
+description: Something in Tavern doesn't work as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug!
+        **Found a security problem?** Don't post it here. Follow the [security policy](https://github.com/tavern-bot/.github/blob/main/SECURITY.md) instead.
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      options:
+        - Core (commands, permissions, help, config, languages)
+        - Moderation / AutoMod / anti-raid
+        - Economy
+        - Casino
+        - Music
+        - Levels
+        - Welcome / auto-roles
+        - Self-assignable roles
+        - Tickets
+        - Community (giveaways, suggestions, starboard…)
+        - Utilities (temp voice, reminders, embeds…)
+        - Dashboard
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Run `/daily`
+        2. Click "Claim" twice quickly
+        3. …
+    validations:
+      required: true
+
+  - type: input
+    id: error-id
+    attributes:
+      label: Error ID
+      description: If Tavern showed an error ID, paste it here.
+      placeholder: e.g. ERR-7F3A2C
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Production bot
+        - Staging / test bot
+        - Local development
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: For staging or local development only.
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or logs
+      description: Please blur personal data and **never paste tokens or webhook URLs**.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and this hasn't been reported yet
+          required: true
+        - label: The module is enabled and Tavern has the required Discord permissions
+          required: true

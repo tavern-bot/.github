@@ -1,0 +1,33 @@
+name: 🌍 Translation
+description: Offer to translate Tavern, or report a translation mistake
+title: "[i18n]: "
+labels: ["i18n"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request type
+      options:
+        - I want to translate Tavern into a new language
+        - I want to help with an existing language
+        - I found a translation mistake
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: e.g. Spanish (es-ES), Brazilian Portuguese (pt-BR)
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: |
+        For a mistake: the command or message, the current text and your suggested fix.
+        Remember that each character has their own voice, and jokes should be adapted rather than translated word for word.
+    validations:
+      required: true
